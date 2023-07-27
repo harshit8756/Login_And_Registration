@@ -4,8 +4,12 @@
  */
 package loginregistrationproject;
 
-import com.sun.jdi.connect.spi.Connection;
+//import com.sun.jdi.connect.spi.Connection;
+//import java.awt.HeadlessException;
 import javax.swing.JOptionPane;
+import java.sql.Connection;
+import java.sql.DriverManager;
+//import java.sql.SQLException;
 
 /**
  *
@@ -15,21 +19,22 @@ import javax.swing.JOptionPane;
 public class MySqlConnect 
 {
     Connection conn;
-    public Connection getCon() 
+    public Connection getConn() 
     {
         try
         {
-        Class.forName("com.mysql.jdbc.Driver");
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/javadatabase","root","root");
-        JOptionPane.showMessageDialog(null,"Database Connection Successfull MySqlConnect getconn method");
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/javadatabase" , "root" , "Harshit@8756");
+        JOptionPane.showMessageDialog(null,"Database Connection Successfull mysqlConnect getconn method");
         return conn; 
         }
         catch(Exception e)
         {
-            JOptionPane.showMessageDialog(null,"Error in MySqlConnect getconn method"+e);
+            JOptionPane.showMessageDialog(null,"Error in MySqlConnect getconn method" + e);
         }
         return conn;
         
     }
+
     
 }

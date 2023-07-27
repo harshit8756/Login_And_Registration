@@ -15,8 +15,10 @@ public class LoginRegistrationProject {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Register_Window rw = new Register_Window();
-        rw.show();
+        //Register_Window rw = new Register_Window();
+        //rw.show();
+        LoginWindow lw = new LoginWindow();
+        lw.show();
     }
     
     
